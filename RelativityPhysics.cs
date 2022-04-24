@@ -34,7 +34,7 @@ public class RelativityPhysics : MonoBehaviour
 { 
     public float mass;
     public Vector3 initalF = new Vector3();
-    public displayDebug;
+    public bool displayDebug;
 
     GameObject manager;         //holds physics manager
     Rigidbody rb;               //holds the object's rigidbody
@@ -80,7 +80,7 @@ public class RelativityPhysics : MonoBehaviour
             {
                 string debug = this.ToString() +
                         "\nLorentz Factor: " + lFactor;
-                debug.log(debug);
+                Debug.Log(debug);
             }
         } else
         {
