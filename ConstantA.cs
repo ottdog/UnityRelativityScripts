@@ -27,11 +27,12 @@ using UnityEngine;
 
 public class ConstantA : MonoBehaviour
 {
-    Rigidbody rb;
-
     public Vector3 force = new Vector3();
     public bool displayDebug;
 
+    Rigidbody rb;
+
+    //floats for debugging
     float v = 0;
     float lastV;
     float deltaV;
