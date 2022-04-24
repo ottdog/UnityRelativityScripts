@@ -54,10 +54,12 @@ public class ConstantA : MonoBehaviour
             v = rb.velocity.magnitude;
             deltaV = v - lastV;
 
-            Debug.Log("Velocity: " + v);
-            Debug.Log("DeltaV:" + deltaV);
-            Debug.Log("Mass: " + rb.mass);
+            string name = this.ToString();
 
+            string debug = name + "\nVelocity: " + v
+                            + "\tDeltaV: " + deltaV
+                            + "\tMass: " + rb.mass;
+            Debug.Log(debug);
         }
     }
 }
