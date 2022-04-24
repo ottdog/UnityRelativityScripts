@@ -16,7 +16,7 @@
  * 
  * Gives attached object the "manager" tag on startup.
  * 
- * Load this script and PhysicsManager.cs before you load any other scripts
+ * Load this script and GravityWell.cs before you load any other scripts
  * in this repository. 
  * 
  * Script execution order can be found under Edit > Project Settings.
