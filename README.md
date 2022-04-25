@@ -21,8 +21,8 @@ for OSS class.
 - Other effects of general relatiity 
 
 ## Known issues:
-- When a non-gravity well object collides with a gravity well, it creates a
-perpetual motion machine
+- When a non-gravity well object collides with a gravity well with a RigidBody
+ it creates a perpetual motion machine.
 - An object can accelerate past C if given a constant acceleration. In this case,
 the object is given a rigidbody mass of infinity. 
 
