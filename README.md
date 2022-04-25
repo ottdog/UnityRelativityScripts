@@ -3,7 +3,8 @@
 This is the remains of a project I started working on in late 2019. 
 
 Latest version was tested on Unity 2021 LTS. Inital code was written on 2019 LTS
-and has been very minimally modified, so should also be compatible with 2019 and 2020.
+and modifications don't use any obsucre packages or niche features, so might also 
+be compatible with 2019 and 2020.
 
 ## A note to RPI OSS graders
 See the `InitalCode` branch to see the orginal state of my code before I cleaned it up
