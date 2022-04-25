@@ -35,6 +35,8 @@ public class RelativityPhysics : MonoBehaviour
     public float mass;
     public Vector3 initalF = new Vector3();
     public bool displayDebug;
+    public bool destroyOnImpact;
+    public bool destroyOnImpactWithWell;
 
     GameObject manager;         //holds physics manager
     Rigidbody rb;               //holds the object's rigidbody
@@ -84,7 +86,7 @@ public class RelativityPhysics : MonoBehaviour
             }
         } else
         {
-            lFactor = 99999999; //For now, this sets gamma to an arbitrarily high value
+            lFactor = Mathf.Infinity; //For now, this sets gamma to an arbitrarily high value
             //to keep the thing from accelerating. I will replace this with a more
             //elegant solution later
             //(Or one that works. Hopefully those align). 
@@ -160,7 +162,6 @@ public class RelativityPhysics : MonoBehaviour
             //skips if the object attached to this script is
             //a gravity well
             if(well == this.gameObject){
-                Debug.Log("Skipped same well");
                 continue;
             }
             tempForce = getForce(well);
@@ -179,4 +180,5 @@ public class RelativityPhysics : MonoBehaviour
     {
         applyGravityForce();
     }
+
 }
