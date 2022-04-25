@@ -54,7 +54,7 @@ public class RelativityPhysics : MonoBehaviour
         c = manager.GetComponent<PhysicsManager>().c;
 
         //retrives all gravity well game objects and puts them in an array
-        gravityWells = GameObject.FindGameObjectsWithTag("Well");
+        gravityWells = GameObject.FindGameObjectsWithTag("well");
 
         //gets this object's rigidbody and adds inital force
         rb = this.GetComponent<Rigidbody>();
@@ -157,6 +157,12 @@ public class RelativityPhysics : MonoBehaviour
         //adds the forces from all wells together into one vector
         foreach (GameObject well in gravityWells)
         {
+            //skips if the object attached to this script is
+            //a gravity well
+            if(well == this.gameObject){
+                Debug.Log("Skipped same well");
+                continue;
+            }
             tempForce = getForce(well);
             tempVector = getHeading(well);
             netForce += getForceVector(tempForce, tempVector);

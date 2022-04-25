@@ -25,13 +25,8 @@
  * want to keep your gravity wells stationary/give them a pre-programmed path
  * to save frame rates.
  * 
- * As of 2022-04-23 this script is incompatible with RealitivityPhysics.cs when
- * applied to the same object. It is intended that both scripts can be added to
- * the same object if you want gravity wells that are affected by other gravity
- * wells.
- * 
- * Multiple gravity wells in one scene does work, however. They just don't
- * interact with each other.
+ * You can apply RelativityPhysics.cs to a gravity well to allow for interactions
+ * between gravity wells. 
  */
 
 using System.Collections;
